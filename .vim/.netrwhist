@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home'
+let g:netrw_dirhist_0='/home/z'
+let g:netrw_dirhist_9='/home/z/test'
+let g:netrw_dirhist_8='/home/z/.config/google-chrome/Default/Local Storage/leveldb'
+let g:netrw_dirhist_7='/home/z/.config/google-chrome/Default/Local Storage'
+let g:netrw_dirhist_6='/home/z'
+let g:netrw_dirhist_5='/home/z/.config/polybar/nordz'
+let g:netrw_dirhist_4='/home/z/.conky'
+let g:netrw_dirhist_3='/home/z/.config/fcitx5/conf'
+let g:netrw_dirhist_2='/home/z/.vim/bundle/Vundle.vim'
