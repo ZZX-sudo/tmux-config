@@ -13,7 +13,6 @@ esac
 
 mkdir "$path" 
 git clone https://github.com/ZZX-sudo/tmux-vim-config.git "$path" 
-git clone https://github.com/VundleVim/Vundle.vim.git "${HOME}/.vim/bundle/Vundle.vim"
 
 [[ -e "${HOME}/.vim.bk" ]] && {echo "backup failure, please backup manually";exit}
 [[ -e "${HOME}/.vimrc" ]] && cp ~/.vim ~/.vim.bk
@@ -24,5 +23,8 @@ git clone https://github.com/VundleVim/Vundle.vim.git "${HOME}/.vim/bundle/Vundl
 ln -s "$path/.vimrc" ~/
 ln -s "$path/.tmux.conf" ~/
 ln -s "$path/.tmux" ~/
+ln -s "$path/.vim" ~/.vim
 
+
+git clone https://github.com/VundleVim/Vundle.vim.git "${HOME}/.vim/bundle/Vundle.vim"
 vim +PluginInstall

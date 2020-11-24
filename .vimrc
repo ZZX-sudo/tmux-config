@@ -55,8 +55,6 @@ Plugin 'taglist.vim'
 Plugin 'Chiel92/vim-autoformat'
 "NedTree
 Plugin 'preservim/nerdtree'
-"Space Dark Theme
-Plugin 'liuchengxu/space-vim-dark'
 "Flake8
 Plugin 'nvie/vim-flake8'
 call vundle#end() 
