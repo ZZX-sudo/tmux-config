@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-release=`lsb_release -i`
+release=`lsb_release -i | awk '{print $3}'`
 path="${HOME}/tmux-vim-conf"
 
 case "$release" in
@@ -14,14 +14,14 @@ esac
 mkdir "$path" 
 git clone https://github.com/ZZX-sudo/tmux-vim-config.git "$path" 
 
-[[ -e "${HOME}/.vim.bk" ]] && echo "backup failure, please backup manually";exit
+[[ -e "${HOME}/.vim.bk" ]] && {echo "backup failure, please backup manually";exit}
 [[ -e "${HOME}/.vimrc" ]] && cp ~/.vim ~/.vim.bk
-[[ -e "${HOME}/.tmux.conf.bk" ]] && echo "backup failure, please backup manually";exit
+[[ -e "${HOME}/.tmux.conf.bk" ]] && {echo "backup failure, please backup manually";exit}
 [[ -e "${HOME}/.tmux.conf" ]] && cp ~/.tmux.conf ~/.tmux.conf.bk
-[[ -e "${HOME}/.vim.bk" ]] && echo "backup failure, please backup manually";exit
+[[ -e "${HOME}/.vim.bk" ]] && {echo "backup failure, please backup manually";exit}
 
 ln -s "$path/.vimrc" ~/
 ln -s "$path/.tmux.conf" ~/
-ln -s "$path/.tmux" ~/ 
+ln -s "$path/.tmux" ~/
 
-
+vim :PluginInstall
